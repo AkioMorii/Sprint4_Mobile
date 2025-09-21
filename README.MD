@@ -8,4 +8,5 @@ Para rodar o projeto:
     -npx expo start;
     -Com o celular, escanear o QR code com o aplicativo Expo Go (Instalado na Play Store) ou rodar pelo PC usando o android studio apertando a tecla "a"
 
+Para acessar o aplicativo é necessário cadastrar um novo usuário.
 Qualquer dúvida entrar em contato pelo Teams: rm551462@fiap.com.br
