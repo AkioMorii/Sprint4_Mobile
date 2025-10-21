@@ -1,3 +1,5 @@
+// Tela de cadastro de um novo usuário
+
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, Alert } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -18,7 +20,7 @@ export default function RegisterScreen({ navigation }: any) {
   const [confirmPassword, setConfirmPassword] = useState('');
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+  const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{7,}$/;
 
   const handleRegister = async () => {
     if (!emailRegex.test(email)) {
@@ -29,7 +31,7 @@ export default function RegisterScreen({ navigation }: any) {
     if (!passwordRegex.test(password)) {
       Alert.alert(
         'Erro',
-        'A senha deve ter pelo menos 8 caracteres, com pelo menos:\n- Uma letra maiúscula\n- Uma letra minúscula\n- Um número\n- Um caractere especial (@$!%*?&)'
+        'A senha deve ter no minimo 6 caracteres, com pelo menos uma letra e um numero.'
       );
       return;
     }

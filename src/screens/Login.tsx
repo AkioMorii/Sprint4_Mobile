@@ -1,3 +1,5 @@
+// Tela de login
+
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, Alert } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -26,10 +28,12 @@ export default function LoginScreen({ navigation }: any) {
           const passwordMatch = bcrypt.compareSync(trimmedPassword, user.password);
 
           if (passwordMatch) {
-            navigation.reset({
-              index: 0,
-              routes: [{ name: 'Home', params: { email: trimmedEmail } }],
+            navigation.navigate('Home', {
+              screen: 'Simulations',
+              params: { screen: 'SimulationList', params: { email: trimmedEmail } },
             });
+
+
           } else {
             Alert.alert('Erro', 'Senha incorreta!');
           }
