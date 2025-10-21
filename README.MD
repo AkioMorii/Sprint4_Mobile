@@ -12,6 +12,6 @@ Para acessar o aplicativo é necessário cadastrar um novo usuário.
 Email recomendado = Teste01@gmail.com.
 Senha recomendada = 123456a.
 
-O aplicativo permite o cadastro de simulações de apóstas e caso o numero de simulações ultrapasse 3 ele gera um alerta e permite a busca de ajuda ao acessar o Gmail.
+O aplicativo permite o cadastro de simulações de apóstas utilizando AsyncStorage e caso o numero de simulações ultrapasse 3 ele gera um alerta e permite a busca de ajuda ao acessar o Gmail.
 
 Qualquer dúvida entrar em contato pelo Teams: rm551462@fiap.com.br
